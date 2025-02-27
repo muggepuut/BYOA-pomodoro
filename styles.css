@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #2563EB;    /* Modern blue */
+    --secondary-color: #DC2626;   /* Modern red */
+    --background-color: #F9FAFB;  /* Slightly warmer background */
+    --card-background: #FFFFFF;
+    --text-primary: #111827;      /* Darker, richer text */
+    --text-secondary: #6B7280;    /* Modern gray */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 440px;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1rem;
+}
+
+.timer-card {
+    background: var(--card-background);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.timer {
+    font-size: 5.5rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin: 0.5rem 0;
+}
+
+.separator {
+    margin: 0 0.2rem;
+}
+
+.mode-badge {
+    display: inline-block;
+    background: #F5F5F5;
+    color: var(--text-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0.75rem 0 1.5rem;
+}
+
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.7rem 1.3rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn.primary {
+    background: var(--primary-color);
+    color: white;
+    margin-right: 1rem;
+}
+
+.btn.primary:hover {
+    background: #0052CC;
+}
+
+.btn.secondary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #E60000;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #E5E5E5;
+    color: var(--text-secondary);
+    margin-top: 1.5rem;
+}
+
+.btn.outline:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.controls {
+    margin-top: 1.5rem;
+}
+
+#mode-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+#toggle-mode {
+    position: relative;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+#toggle-mode:hover {
+    background-color: #555;
+}
+
+.switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    background-color: var(--text-secondary);
+    border-radius: 34px;
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.switch-label {
+    margin-left: 12px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+} 
