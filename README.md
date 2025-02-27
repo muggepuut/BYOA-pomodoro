@@ -1,4 +1,4 @@
-#Pomodoro Timer
+# Pomodoro Timer
 
 A simple pomodoro timer with a focus on a modern, clean design.
 
