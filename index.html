@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -15,6 +16,10 @@
         <p class="subtitle">Boost your productivity</p>
         
         <div class="timer-card">
+            <button id="toggle-mode" class="btn outline">
+                <i class="fas fa-moon"></i>
+            </button>
+            
             <div class="timer">
                 <span id="minutes">25</span><span class="separator">:</span><span id="seconds">00</span>
             </div>
@@ -28,12 +33,6 @@
                 <button id="reset" class="btn secondary">Reset</button>
             </div>
         </div>
-
-        <label class="switch">
-            <input type="checkbox" id="toggle-mode">
-            <span class="slider"></span>
-            <span class="switch-label">Break Mode</span>
-        </label>
     </div>
     <script src="script.js"></script>
 </body>

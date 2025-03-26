@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #800080;    /* Modern blue */
+    --primary-color: #1271ff;    /* Modern blue */
     --secondary-color: #DC2626;   /* Modern red */
     --background-color: #F9FAFB;  /* Slightly warmer background */
     --card-background: #FFFFFF;
@@ -43,11 +43,13 @@ h1 {
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    position: relative;
 }
 
 .timer {
     font-size: 5.5rem;
     font-weight: 500;
+    color: var(--primary-color);
     letter-spacing: -2px;
     margin: 0.5rem 0;
 }
@@ -119,67 +121,23 @@ h1 {
 }
 
 #toggle-mode {
-    position: relative;
-    font-size: 1rem;
-    padding: 0.5rem 1.5rem;
-    cursor: pointer;
-    background-color: #666;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
-
-#toggle-mode:hover {
-    background-color: #555;
-}
-
-.switch {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 1.5rem;
-    cursor: pointer;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 26px;
-    background-color: var(--text-secondary);
-    border-radius: 34px;
-    transition: .3s;
-}
-
-.slider:before {
     position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    border-radius: 50%;
-    transition: .3s;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
-input:checked + .slider {
-    background-color: var(--primary-color);
+#toggle-mode i {
+    font-size: 1.1rem;
 }
 
-input:checked + .slider:before {
-    transform: translateX(24px);
-}
-
-.switch-label {
-    margin-left: 12px;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+/* Remove the old switch styles */
+.switch, .switch input, .slider, .switch-label {
+    display: none;
 } 

@@ -79,7 +79,13 @@ resetButton.addEventListener('click', resetTimer);
 
 toggleModeButton.addEventListener('click', () => {
     switchMode();
-    toggleModeButton.textContent = isWorkTime ? 'Switch to Break' : 'Switch to Work';
+    const icon = toggleModeButton.querySelector('i');
+    
+    if (isWorkTime) {
+        icon.className = 'fas fa-moon';
+    } else {
+        icon.className = 'fas fa-sun';
+    }
 });
 
 // Initialize display
